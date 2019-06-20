@@ -1,4 +1,8 @@
 import factory.abstractfac.BenzNMCar;
+import factory.example.FskPhoneFactory;
+import factory.example.PhoneFactory;
+import factory.example2.Factory;
+import factory.example2.GeLiFactory;
 import factory.method.BenzCarFactory;
 import factory.method.BmwCarFactory;
 import factory.method.CarFactory;
@@ -7,7 +11,7 @@ import factory.simple.BmwCar;
 import factory.simple.ICar;
 import factory.simple.SimpleFactory;
 import org.junit.Test;
-import org.slf4j.ILoggerFactory;
+
 
 
 /**
@@ -87,5 +91,21 @@ public class DesignPattern
         benzCar.start();
     }
 
+
+    @Test
+    public void testAbstractMethod2()
+    {
+        Factory geLiFactory = new GeLiFactory();
+        geLiFactory.createFan().run();
+        geLiFactory.createAirCondition().cold();
+    }
+
+    @Test
+    public void testAbstractMethod3()
+    {
+        PhoneFactory fskPhoneFactory = new FskPhoneFactory();
+        fskPhoneFactory.createIPhone().run();
+        fskPhoneFactory.createAndroidPhone().run();
+    }
 
 }
