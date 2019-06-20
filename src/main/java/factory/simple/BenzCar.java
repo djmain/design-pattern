@@ -1,6 +1,4 @@
-package factory;
-
-import javax.swing.*;
+package factory.simple;
 
 /**
  * created by Jay on 2019/6/19
